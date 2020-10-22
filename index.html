@@ -13,7 +13,7 @@
     <div id="app">
         <h1>{{ title }}</h1>
         <div>
-            <input type="text" size="25" placeholder="Digite para gerar..." v-model="text">
+            <input type="text" size="26" placeholder="Digite a URL parar gerar..." v-model="text">
         </div>
 
         <div v-if="text" class="output">
@@ -25,9 +25,9 @@
         new Vue({
             el: "#app",
             data: {
-                title: "Gerador QRCode",
-                text: "http://www.fatectq.edu.br/",
-                qrcode: new QRious({ size: 300 })
+                title: "Gerador de QRCode",
+                text: "",
+                qrcode: new QRious({ size: 270})
             },
             computed: {
                 newQRCode() {
